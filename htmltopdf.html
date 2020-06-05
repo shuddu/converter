@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+		 <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css1/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css1/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css1/style.css">
+	
+	 <link rel="stylesheet" href="scss/upload.scss">
+	
+	
+	
+	<script type="text/javascript">
+$(document).ready(function(){
+$("#btn6").click(function(){
+   $("#divLoading").addClass("divLoading1");
+			setTimeout(RemoveClass, 1200);
+		});
+		function RemoveClass() {
+		   $("#divLoading").removeClass("divLoading1");
+			window.location.href = 'resultpdf.html';
+		}
+});
+
+</script>
+	
+	
+	<style type="text/css">
+	
+#img5:active
+{
+transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+
+}
+
+
+.divLoading1
+{
+
+position : fixed;
+z-index: 300;
+background-image : url('giri2.gif');
+background-size: 100px 100px;
+background-color:#666;
+opacity : 0.4;
+background-repeat : no-repeat;
+background-position : center;
+left : 0;
+bottom : 0;
+right : 0;
+top : 0;
+}
+
+
+	</style>	
+	</head>
+    <body class="sb-nav-fixed">
+         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		 
+            <a class="navbar-brand" href="index.html">Start Bootstrap</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            ><!-- Navbar Search-->
+			 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+      <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button>
+			</ul>
+
+    
+        </nav>
+		
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading" style="font-size:22px;color:white;">Tasks</div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
+                                ><div class="sb-nav-link"><i class="fas fa-columns"></i></div>
+                                Video
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Subtitling </a><a class="nav-link" href="layout-sidenav-light.html">Watermarking</a> <a class="nav-link" href="layout-sidenav-light.html">Transcoding</a></nav>
+                            </div>
+								<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+									PDF
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">HTML To PDF</a></nav>
+							 </div>
+							 
+							 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+									MySQL
+									<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Export To Excel</a></nav>
+							 </div>
+                           </div>
+                   
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+						<div class="container-fluid">
+                      <br>
+							<div class="row">
+					<div class="col-xl-4 col-sm-4" >
+					</div>		
+					
+					<div class="col-xl-6 col-sm-6">
+					<div class="row">
+					
+					<div class="col-xl-3 col-md-4 col-sm-6">
+					
+							<div class="card" style="border:none;width:120px;height:90px;">
+									
+										<img src="s4.png" width="90px" height="90px" style="margin-left:10px;" alt="Cinque Terre">
+					
+									</div>
+
+					</div>
+					<br>
+					<div class="col-xl-5">
+					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET PDF</h5>
+					<figcaption class="figure-caption"><p class="card-text">The easiest way to convert HTML Page to PDF</p></figcaption>
+									</span>
+					</div>
+					<br>
+					
+					<div class="col-xl-2">
+					</div>
+					</div>
+			
+				<div class="col-xl-2">
+					</div>
+				</div>
+				</div>
+					<br>
+
+                        <div class="row">
+						
+						<div class="col-xl-2 col-md-4">
+                              
+							  </div>
+                            <div class="col-xl-7 col-md-4">
+										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:400px;border:1px solid #dbabff;">
+										<br><br>
+									
+									<img src="t1.jpg" width="240px" height="50px">												
+									<div class="card-body" >
+									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+	
+
+        
+
+		<br>
+		<form action="resultpdf.html" method="post">
+    <div class="form-group">
+  
+		<div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg-0">Enter the URL here</span>
+  </div>
+  <input type="text" id="i1" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+<div class="input-group-append">
+    <span class="input-group-text" ><img id="img5" class="size_of_img" src="i1.png" onclick="document.getElementById('i1').value ='' " style="width:20px;height:20px;" alt="Image 1" />
+</span>
+  </div>
+</div>
+	</div>
+	<br>
+			<div class="float-right">
+								
+		<button  type="submit" id="btn6" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:18px" >Convert To PDF</button>
+				</div>
+</form>
+
+
+<br>
+
+  
+									</div>
+									</div>
+								</div>
+								
+						
+				<div class="col-xl-2">
+					</div>
+					
+						<br><br><br>	
+                        </div>
+					
+                        <div class="row">
+                            <div class="col-xl-6">
+                                
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+  <script type="text/javascript" src="js1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js1/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js1/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js1/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+		
+		</body>
+</html>
