@@ -54,10 +54,10 @@ top : 0;
 			 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                 
             </form>
-            <!-- Navbar-->
+           <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">
       <button type="button" class="btn btn-sm" style="width:28px;height:36px;background-color:#212121;">
-	    <a href="index.html"><img src="logout.png" width="22px;height:25px;"/></a>  
+	    <a href="index.html"><img src="img/logout.png" width="22px;height:25px;"/></a>  
           <span class="glyphicon glyphicon-log-out"></span> 
         </button>
 			</ul>
@@ -65,6 +65,7 @@ top : 0;
     
         </nav>
 		
+       	
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -102,7 +103,7 @@ top : 0;
                    
                 </nav>
             </div>
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content" style="height: 800px">
                 <main>
                     <div class="container-fluid">
                       <br>
@@ -117,15 +118,15 @@ top : 0;
 					
 							<div class="card md-6" style="border:none;width:120px;height:90px;">
 									
-										<img src="img/s5.png" width="90px" height="90px" style="margin-left:10px;" alt="Cinque Terre">
+										<img src="img/vs.png" width="90px" height="90px" style="margin-left:15px;" alt="Cinque Terre">
 					
 									</div>
 
 					</div>
 					<br>
 					<div class="col-xl-5 col-md-5">
-					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET EXCEL</h5>
-					<figcaption class="figure-caption"><p class="card-text">The easiest way to convert SQL file to Excel</p></figcaption>
+					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET SUBTITLE ON VIDEO</h5>
+					<figcaption class="figure-caption"><p class="card-text">The easiest way to add subtitle on your video</p></figcaption>
 									</span>
 					</div>
 					<br>
@@ -146,10 +147,10 @@ top : 0;
                               
 							  </div>
                             <div class="col-xl-7 col-md-4">
-										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:400px;border:1px solid #dbabff;">
+										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:445px;border:1px solid #dbabff;">
 										<br><br>
 									
-									<img src="img/t2.png" width="240px" height="50px">												
+									<img src="img/t3.png" width="240px" height="50px">												
 									<div class="card-body" >
 									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 	
@@ -166,9 +167,9 @@ top : 0;
 function fileValidation(){
     var fileInput = document.getElementById('inputGroupFile01');
     var filePath = fileInput.value;
-    var allowedExtensions = /(\.sql)$/i;
+    var allowedExtensions = /(\.mp4)$/i;
     if(!allowedExtensions.exec(filePath)){
-        alert('Please upload file having extensions .sql only.');
+        alert('Please upload file having extensions .mp4 only.');
         document.getElementById("inputGroupFile01").value= '';
 		document.getElementBy
         return false;
@@ -176,17 +177,31 @@ function fileValidation(){
     }
 
 	</script>
-    <label class="custom-file-label" for="inputGroupFile01">Choose a sql file</label>
+	
+    <label class="custom-file-label" for="inputGroupFile01">Choose a video file</label>
   </div>
 </div>
-
+<br>
+<div class="form-group">
+    <label class="control-label col-md-5">Choose the Option</label>
+    <div class="col-md-12">
+        <label class="radio-inline control-label">
+            <input checked="checked" id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="1"> SRT File
+        </label>
+		&nbsp;&nbsp;&nbsp;
+		<label class="radio-inline control-label">
+            <input  id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="2"> Embeded Text
+        </label>
+	
+		
+    </div>
+</div>
 <div id="divLoading">
 </div>
 
-               <br><br>
 			   <div class="text-center">
 									<button type="submit" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
-
+&nbsp;&nbsp;
 									<script type="text/javascript">
 
 function loading()
@@ -199,7 +214,7 @@ $("#divLoading").addClass("divLoading1");
 		function RemoveClass() {
 		
 		   $("#divLoading").removeClass("divLoading1");
-		   window.location.href='resultexcel.html';
+		   window.location.href='resultsubtitle.html';
 }
 			
 }

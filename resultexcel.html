@@ -21,29 +21,49 @@
   <link rel="stylesheet" href="css1/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css1/style.css">
-	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	 <link rel="stylesheet" href="scss/upload.scss">
-	<style>
+	<link href="extern.html" rel="import" />
 	
-
-.divLoading1
+	
+	<style type="text/css">
+	
+#img5:active
 {
+transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
 
-position : fixed;
-z-index: 300;
-background-image : url('giri2.gif');
- background-size: 100px 100px;
-background-color:#666;
-opacity : 0.4;
-background-repeat : no-repeat;
-background-position : center;
-left : 0;
-bottom : 0;
-right : 0;
-top : 0;
 }
 
-	</style>
+.btn5 {
+  background-color: #400e75;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn6 {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* Darker background on mouse-over */
+.btn5:hover {
+  background-color: #6017ad;
+}
+
+	</style>	
+	<script type="text/javascript">
+
+
+	</script>
 	
 	</head>
     <body class="sb-nav-fixed">
@@ -57,7 +77,7 @@ top : 0;
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">
       <button type="button" class="btn btn-sm" style="width:28px;height:36px;background-color:#212121;">
-	    <a href="index.html"><img src="logout.png" width="22px;height:25px;"/></a>  
+	    <a href="index.html"><img src="img/logout.png" width="22px;height:25px;"/></a>  
           <span class="glyphicon glyphicon-log-out"></span> 
         </button>
 			</ul>
@@ -71,51 +91,46 @@ top : 0;
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading" style="font-size:22px;color:white;">Tasks</div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
-                                ><div class="sb-nav-link"><i class="fas fa-columns"></i></div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"><div class="sb-nav-link"><i class="fas fa-columns"></i></div>
                                 Video
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="getsubtitle.html">Subtitling </a><a class="nav-link" href="getwatermark.html">Watermarking</a> <a class="nav-link" href="gettranscoding.html">Transcoding</a></nav>
+                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Subtitling </a><a class="nav-link" href="layout-sidenav-light.html">Watermarking</a> <a class="nav-link" href="layout-sidenav-light.html">Transcoding</a></nav>
                             </div>
-							
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+								<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 									PDF
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="htmltopdf.html">HTML To PDF</a></nav>
+                             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">HTML To PDF</a></nav>
 							 </div>
 							 
-							 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="false" aria-controls="collapsePages"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+							 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
 									MySQL
-									<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapsePages2" aria-labelledby="headingThree" data-parent="#sidenavAccordion">
-                             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="index.html"  >Export To Excel</a></nav>
+									<div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                             <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Export To Excel</a></nav>
 							 </div>
                            </div>
-							 
                    
                 </nav>
+
             </div>
+			
+			
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid">
+						<div class="container-fluid">
                       <br>
 							<div class="row">
-					<div class="col-xl-4 col-md-4 col-sm-4" >
+					<div class="col-xl-4 col-sm-4" >
 					</div>		
 					
-					<div class="col-xl-6 col-md-6 col-sm-6">
+					<div class="col-xl-6 col-sm-6">
 					<div class="row">
 					
 					<div class="col-xl-3 col-md-4 col-sm-6">
 					
-							<div class="card md-6" style="border:none;width:120px;height:90px;">
+							<div class="card" style="border:none;width:120px;height:90px;">
 									
 										<img src="img/s5.png" width="90px" height="90px" style="margin-left:10px;" alt="Cinque Terre">
 					
@@ -123,18 +138,18 @@ top : 0;
 
 					</div>
 					<br>
-					<div class="col-xl-5 col-md-5">
-					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET EXCEL</h5>
-					<figcaption class="figure-caption"><p class="card-text">The easiest way to convert SQL file to Excel</p></figcaption>
+					<div class="col-xl-5">
+					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET Excel</h5>
+					<figcaption class="figure-caption"><p class="card-text">The easiest way to convert SQl File to Excel</p></figcaption>
 									</span>
 					</div>
 					<br>
 					
-					<div class="col-xl-2 col-md-2">
+					<div class="col-xl-2">
 					</div>
 					</div>
 			
-				<div class="col-xl-2 col-md-2">
+				<div class="col-xl-2">
 					</div>
 				</div>
 				</div>
@@ -154,104 +169,22 @@ top : 0;
 									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 	
 
-<br>
-<form>
-<div class="input-group">
-  
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" onchange="return fileValidation()" required>
-	  <br>
-	  
-	<script type="text/javascript">
-function fileValidation(){
-    var fileInput = document.getElementById('inputGroupFile01');
-    var filePath = fileInput.value;
-    var allowedExtensions = /(\.sql)$/i;
-    if(!allowedExtensions.exec(filePath)){
-        alert('Please upload file having extensions .sql only.');
-        document.getElementById("inputGroupFile01").value= '';
-		document.getElementBy
-        return false;
-    }
-    }
-
-	</script>
-    <label class="custom-file-label" for="inputGroupFile01">Choose a sql file</label>
-  </div>
-</div>
-
-<div id="divLoading">
-</div>
-
-               <br><br>
-			   <div class="text-center">
-									<button type="submit" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
-
-									<script type="text/javascript">
-
-function loading()
-{
-
-
-$("#divLoading").addClass("divLoading1");
-	setTimeout(RemoveClass, 2500);
-	
-		function RemoveClass() {
-		
-		   $("#divLoading").removeClass("divLoading1");
-		   window.location.href='resultexcel.html';
-}
-			
-}
-
-
-
-</script>		
-									
-									
-									<button type="submit" onClick="reset()" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-10" style="background-color:green;color:white;font-size:16px" >Reset</button>
-<script type="text/javascript">
-function reset(){
-    
-        document.getElementById("inputGroupFile01").value= '';
-	}
-
-	</script>
-</div>
-								</div>
 								
-								</form>
+								<div class="text-center">
+						  <img id="img2" src="img/e1.png" style="align-items-center" width="60px" height="65px">
+						<br>
+							<p id="p4">Your PDF is Ready Download From Here.</p>
+<br>
+					
+		<button class="btn5" type="submit" value="submit"><i class="fa fa-download"></i> Download</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="index.html"><button class="btn6"  value="submit">Return</button></a>
+			
+						  </div>
+		
+										</div>
 									</div>
 								</div>
 								
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1"  role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document" >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">How It Works ?</h5>
-        <a href="index.html"><button type="button" class="close" data-dismiss="modal" aria-label="Close"></a>
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...cxcnxm,cx,mc<br><br>
-		sxd,snc,canvasxbckxbcjkxc<br><br>
-		xncxcnzxc<br><br>
-		 cxn ckzx ckzx ckzx
-		 
-		 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn " data-dismiss="modal" style="color:white;background-color:black;" >Close</button>
-
-<script type="text/javascript">
-setTimeout(function() {
-    $('#exampleModalCenter').modal();
-}, 1000);
-	</script>
 						
 				<div class="col-xl-2">
 					</div>

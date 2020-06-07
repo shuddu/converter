@@ -54,17 +54,17 @@ top : 0;
 			 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                 
             </form>
-            <!-- Navbar-->
+           <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">
       <button type="button" class="btn btn-sm" style="width:28px;height:36px;background-color:#212121;">
-	    <a href="index.html"><img src="logout.png" width="22px;height:25px;"/></a>  
+	    <a href="index.html"><img src="img/logout.png" width="22px;height:25px;"/></a>  
           <span class="glyphicon glyphicon-log-out"></span> 
         </button>
 			</ul>
 
     
         </nav>
-		
+			
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -102,7 +102,7 @@ top : 0;
                    
                 </nav>
             </div>
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content" style="height:1100px">
                 <main>
                     <div class="container-fluid">
                       <br>
@@ -117,15 +117,15 @@ top : 0;
 					
 							<div class="card md-6" style="border:none;width:120px;height:90px;">
 									
-										<img src="img/s5.png" width="90px" height="90px" style="margin-left:10px;" alt="Cinque Terre">
+										<img src="img/vs1.png" width="90px" height="90px" style="margin-left:20px;" alt="Cinque Terre">
 					
 									</div>
 
 					</div>
 					<br>
 					<div class="col-xl-5 col-md-5">
-					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET EXCEL</h5>
-					<figcaption class="figure-caption"><p class="card-text">The easiest way to convert SQL file to Excel</p></figcaption>
+					<span><h5 style="font-weight:bold;font-size:22px;margin-top:10px;">GET WATERMARKED VIDEO</h5>
+					<figcaption class="figure-caption"><p class="card-text">The easiest way to put wtarermark on your video</p></figcaption>
 									</span>
 					</div>
 					<br>
@@ -146,19 +146,21 @@ top : 0;
                               
 							  </div>
                             <div class="col-xl-7 col-md-4">
-										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:400px;border:1px solid #dbabff;">
+										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:750px;border:1px solid #dbabff;">
 										<br><br>
 									
-									<img src="img/t2.png" width="240px" height="50px">												
+									<img src="img/t4.png" width="240px" height="50px">												
 									<div class="card-body" >
 									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 	
 
 <br>
 <form>
+  <label class="control-label col-md-5">Select a Video File</label>
 <div class="input-group">
   
   <div class="custom-file">
+
     <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" onchange="return fileValidation()" required>
 	  <br>
 	  
@@ -166,7 +168,7 @@ top : 0;
 function fileValidation(){
     var fileInput = document.getElementById('inputGroupFile01');
     var filePath = fileInput.value;
-    var allowedExtensions = /(\.sql)$/i;
+    var allowedExtensions = /(\.mp4|\.mp3)$/i;
     if(!allowedExtensions.exec(filePath)){
         alert('Please upload file having extensions .sql only.');
         document.getElementById("inputGroupFile01").value= '';
@@ -176,14 +178,86 @@ function fileValidation(){
     }
 
 	</script>
-    <label class="custom-file-label" for="inputGroupFile01">Choose a sql file</label>
+ 
+    <label class="custom-file-label" for="inputGroupFile01">Choose a video file</label>
   </div>
 </div>
+
+
+<br>
+  <label class="control-label col-md-5">Select a watermark image</label>
+<div class="input-group">
+  
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02" onchange="return fileValidation1()" required>
+	  <br>
+	  
+	<script type="text/javascript">
+function fileValidation1(){
+    var fileInput = document.getElementById('inputGroupFile02');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        alert('Please upload file having extensions .jpg/.png only.');
+        document.getElementById("inputGroupFile02").value= '';
+		document.getElementBy
+        return false;
+    }
+    }
+
+	</script>
+	
+    <label class="custom-file-label" for="inputGroupFile02">Choose a jpg or png file</label>
+  </div>
+</div>
+
+<br>
+  <div class="form-group">
+    <label class="control-label col-md-5">Choose Alignment</label>
+    <div class="col-md-12">
+        <label class="radio-inline control-label">
+            <input checked="checked" id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="1"> Top Left
+        </label>
+		&nbsp;&nbsp;&nbsp;
+		<label class="radio-inline control-label">
+            <input  id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="2"> Top Right
+        </label>
+		&nbsp;&nbsp;&nbsp;
+		<label class="radio-inline control-label">
+            <input  id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="3"> Bottom Left
+        </label>
+		&nbsp;&nbsp;&nbsp;
+		
+        <label class="radio-inline control-label">
+            <input id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="4"> Bottom Right
+        </label>
+		&nbsp;&nbsp;&nbsp;
+		<label class="radio-inline control-label">
+            <input id="TaskLog_TaskTypeId" name="TaskLog.TaskTypeId" type="radio" value="4"> Center
+        </label>
+    </div>
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">X-axis</span>
+  </div>
+  <input type="text" class="form-control" placeholder="Enter the margin from X-aixs" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Y-axis</span>
+  </div>
+  <input type="text" class="form-control" placeholder="Enter the margin from Y-axis" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
 
 <div id="divLoading">
 </div>
 
-               <br><br>
+<br>
 			   <div class="text-center">
 									<button type="submit" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
 
