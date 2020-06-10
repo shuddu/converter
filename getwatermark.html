@@ -204,6 +204,8 @@ function fileValidation1(){
 		document.getElementBy
         return false;
     }
+	
+	
     }
 
 	</script>
@@ -243,16 +245,97 @@ function fileValidation1(){
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">X-axis</span>
   </div>
-  <input type="text" class="form-control" placeholder="Enter the margin from X-aixs" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" onchange="xtextvalidation()" id="xtext" placeholder="Enter the margin from X-aixs" aria-label="Username" aria-describedby="basic-addon1" required>
 </div>
+<p id="ptxt1" style="color:red;font-size:14px;" ></p>
+
+<script type="text/javascript">
+
+function xtextvalidation()
+{
+var a=document.getElementById('xtext').value;
+
+if(parseInt(a)<0)
+{
+
+document.getElementById("ptxt1").innerHTML="Enter the digit Greater than 0";
+return false;
+}
+
+else if(Number.isInteger(parseInt(a)))
+{
+document.getElementById("ptxt1").innerHTML='';
+
+return true;
+}
+
+
+else
+{
+document.getElementById("xtext").value='';
+document.getElementById("ptxt1").innerHTML="Enter the digit in input";
+return false;
+}
+
+
+
+}
+
+
+
+</script>
+
 
 
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Y-axis</span>
   </div>
-  <input type="text" class="form-control" placeholder="Enter the margin from Y-axis" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" onchange="ytextvalidation()" id="ytext" placeholder="Enter the margin from Y-axis" aria-label="Username" aria-describedby="basic-addon1" required>
 </div>
+<p id="ptxt2" style="color:red;font-size:14px;" ></p>
+
+
+
+
+
+<script type="text/javascript">
+
+function ytextvalidation()
+{
+var a=document.getElementById('ytext').value;
+
+if(parseInt(a)<0)
+{
+
+document.getElementById("ptxt2").innerHTML="Enter the digit Greater than 0";
+return false;
+}
+
+else if(Number.isInteger(parseInt(a)))
+{
+document.getElementById("ptxt2").innerHTML='';
+
+return true;
+}
+
+
+
+else
+{
+document.getElementById("ytext").value='';
+document.getElementById("ptxt2").innerHTML="Enter the digit in input";
+return false;
+}
+
+
+
+
+}
+
+
+
+</script>
 
 
 <div id="divLoading">
@@ -260,14 +343,29 @@ function fileValidation1(){
 
 <br>
 			   <div class="text-center">
-									<button type="submit" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
+									<button type="button" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
 
 									<script type="text/javascript">
 
 function loading()
 {
 
+if ((document.getElementById('inputGroupFile01')).value.length >0 && (document.getElementById('inputGroupFile02')).value.length >0 && (document.getElementById('xtext')).value.length >0 && (document.getElementById('ytext')).value.length >0)
+{
+loader();		
+}
 
+
+
+
+else{
+	
+}
+}
+
+			
+function loader()
+{
 $("#divLoading").addClass("divLoading1");
 	setTimeout(RemoveClass, 2500);
 	
@@ -276,15 +374,19 @@ $("#divLoading").addClass("divLoading1");
 		   $("#divLoading").removeClass("divLoading1");
 		   window.location.href='resultwatermark.html';
 }
-			
 }
+
+
+
+
+
 
 
 
 </script>		
 									
 									
-									<button type="submit" onClick="reset()" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-10" style="background-color:green;color:white;font-size:16px" >Reset</button>
+									<button type="button" onClick="reset()" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-10" style="background-color:green;color:white;font-size:16px" >Reset</button>
 <script type="text/javascript">
 function reset(){
     

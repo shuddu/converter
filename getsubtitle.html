@@ -104,7 +104,7 @@ top : 0;
                    
                 </nav>
             </div>
-            <div id="layoutSidenav_content" style="height: 800px">
+            <div id="layoutSidenav_content" style="height: 850px">
                 <main>
                     <div class="container-fluid">
                       <br>
@@ -148,7 +148,7 @@ top : 0;
                               
 							  </div>
                             <div class="col-xl-7 col-md-4">
-										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:445px;border:1px solid #dbabff;">
+										<div class="card"  class="shadow-lg p-3 mb-5 bg-#dbabff" style="height:460px;border:1px solid #dbabff;">
 										<br><br>
 									
 									<img src="img/t3.png" width="240px" height="50px">												
@@ -161,7 +161,7 @@ top : 0;
 <div class="input-group">
   
   <div class="custom-file">
-    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" onchange="return fileValidation()" required>
+    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" onchange="return fileValidation()" >
 	  <br>
 	  
 	<script type="text/javascript">
@@ -170,11 +170,19 @@ function fileValidation(){
     var filePath = fileInput.value;
     var allowedExtensions = /(\.mp4)$/i;
     if(!allowedExtensions.exec(filePath)){
-        alert('Please upload file having extensions .mp4 only.');
-        document.getElementById("inputGroupFile01").value= '';
-		document.getElementBy
-        return false;
+      document.getElementById("icon1").style.display = "block";
+	  document.getElementById("p1").innerHTML="Select a valid video file extension only";
+	  document.getElementById("inputGroupFile01").value= '';
+		return false;
     }
+else
+{
+
+	document.getElementById("p1").innerHTML=' ';
+	document.getElementById("icon1").style.display = "none";
+		
+		return true;
+}
     }
 
 	</script>
@@ -182,7 +190,12 @@ function fileValidation(){
     <label class="custom-file-label" for="inputGroupFile01">Choose a video file</label>
   </div>
 </div>
-<br>
+
+<img id="icon1"  src="img/alerti.png" align="left" style="margin-top:10px;margin-left:5px;width:18px;height:18px;display:none;">&nbsp;&nbsp;
+<p id="p1" class="text-sm-left" style="margin-top:10px;color:red;size:18px;margin-left:10px;float:left;"></p>
+
+
+<br><br>
 <div class="form-group">
     <label class="control-label col-md-5">Choose the Option</label>
     <div class="col-md-12">
@@ -201,14 +214,31 @@ function fileValidation(){
 </div>
 
 			   <div class="text-center">
-									<button type="submit" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
+									<button type="button" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-20" style="background-color:#400e75;color:white;font-size:16px" onClick="loading()">Convert </button>&nbsp;&nbsp;
 &nbsp;&nbsp;
 									<script type="text/javascript">
 
 function loading()
 {
 
+if ((document.getElementById('inputGroupFile01')).value.length >0)
+{
+loader();		
+}
 
+
+
+
+else{
+document.getElementById("p1").innerHTML="This Field is Required";
+document.getElementById("icon1").style.display = "block";
+	
+}
+}
+
+			
+function loader()
+{
 $("#divLoading").addClass("divLoading1");
 	setTimeout(RemoveClass, 2500);
 	
@@ -217,7 +247,6 @@ $("#divLoading").addClass("divLoading1");
 		   $("#divLoading").removeClass("divLoading1");
 		   window.location.href='resultsubtitle.html';
 }
-			
 }
 
 
@@ -225,11 +254,13 @@ $("#divLoading").addClass("divLoading1");
 </script>		
 									
 									
-									<button type="submit" onClick="reset()" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-10" style="background-color:green;color:white;font-size:16px" >Reset</button>
+									<button type="button" onClick="reset()" class="btn btn-md shadow bg-blue text-uppercase font-weight-bold mb-10" style="background-color:green;color:white;font-size:16px" >Reset</button>
 <script type="text/javascript">
 function reset(){
+
     
         document.getElementById("inputGroupFile01").value= '';
+
 	}
 
 	</script>
